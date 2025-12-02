@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SD Farmers Markets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="site-header">
+    <div class="logo-block">
+      <div class="logo-icon">
+        <span class="logo-square"></span>
+      </div>
+      <div class="logo-text">
+        <div class="logo-title">SD Events</div>
+        <div class="logo-subtitle">Discover Local Events</div>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <button class="nav-pill nav-pill--active" data-view="home">
+        <span class="nav-icon nav-icon--home"></span>
+        Home
+      </button>
+      <button class="nav-pill" data-view="faq">
+        <span class="nav-icon nav-icon--faq"></span>
+        FAQ
+      </button>
+      <button class="nav-pill" data-view="favorites">
+        <span class="nav-icon nav-icon--account"></span>
+        Favorites
+      </button>
+      <button class="nav-pill nav-pill--ghost" data-view="account">
+        <span class="nav-icon nav-icon--account-circle"></span>
+        Account
+        <span class="nav-chevron"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO / SEARCH -->
+    <section class="hero">
+      <div class="hero-media">
+        <img src="source/image.jpg" alt="San Diego farmers market" class="hero-img" />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <h1>Discover Local Events in San Diego</h1>
+        <p>
+          Find farmers markets, craft fairs, pop-up shops, community festivals, and more happening around you.
+        </p>
+
+        <div class="hero-search">
+          <input
+            type="text"
+            class="hero-search-input"
+            placeholder="Search by market, neighborhood, or event type"
+          />
+          <button class="btn btn-primary hero-search-btn">
+            <span class="btn-icon btn-icon--search"></span>
+            Search
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME VIEW -->
+    <section id="home-view">
+      <!-- FILTER BAR -->
+      <section class="filter-bar">
+        <div class="filter-inner">
+          <div class="filter-header">
+            <span class="filter-icon"></span>
+            <h2>Filter Markets</h2>
+          </div>
+
+          <div class="filter-groups">
+            <div class="filter-group">
+              <label class="filter-label">Day of Week</label>
+              <div class="chip-row">
+                <button class="chip">Sunday</button>
+                <button class="chip">Monday</button>
+                <button class="chip">Tuesday</button>
+                <button class="chip">Wednesday</button>
+                <button class="chip">Thursday</button>
+                <button class="chip">Friday</button>
+                <button class="chip">Saturday</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label">Region</label>
+              <div class="chip-row">
+                <button class="chip">Central</button>
+                <button class="chip">North County</button>
+                <button class="chip">East County</button>
+                <button class="chip">South Bay</button>
+                <button class="chip">Coastal</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TODAY STATE + EMPTY -->
+      <section class="today-section">
+        <div class="today-header">
+          <button class="today-pill">Today</button>
+          <h2>Thursday, November 13, 2025</h2>
+          <p>0 events happening today</p>
+        </div>
+
+        <div class="today-card">
+          <div class="today-emoji">📅</div>
+          <h3>No Events Today</h3>
+          <p>Check out upcoming events below!</p>
+        </div>
+      </section>
+
+      <!-- UPCOMING EVENTS -->
+      <section class="upcoming">
+        <div class="upcoming-header">
+          <h2>Upcoming Events</h2>
+          <div class="toggle-group">
+            <button class="toggle toggle--active">
+              <span class="toggle-icon toggle-icon--grid"></span>
+              Grid
+            </button>
+            <button class="toggle">
+              <span class="toggle-icon toggle-icon--map"></span>
+              Map
+            </button>
+          </div>
+        </div>
+
+        <div class="upcoming-inner">
+          <header class="upcoming-copy">
+            <h3>Upcoming Events</h3>
+            <p>8 events happening throughout San Diego County</p>
+          </header>
+
+          <!-- Event cards grid -->
+          <div class="card-grid">
+            <!-- 1: The Kickback -->
+            <article class="event-card" data-event-id="kickback">
+              <div class="event-media">
+                <img src="source/ImageWithFallback-5.png" alt="The Kickback pop-up market" />
+                <div class="tag tag--type">Pop-Up Market</div>
+                <div class="tag tag--status">Coming Soon</div>
+              </div>
+              <div class="event-body">
+                <h4>The Kickback</h4>
+                <ul class="event-meta">
+                  <li>
+                    <span class="meta-icon meta-icon--location"></span>
+                    Mira Mesa Community Park
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--calendar"></span>
+                    November 21
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--time"></span>
+                    3:00 PM – 9:00 PM
+                  </li>
+                </ul>
+                <p class="event-description">
+                  A vibrant pop-up market featuring local vendors selling trendy clothes, handmade jewelry,
+                  and delicious food. Come hang out and support local businesses!
+                </p>
+                <div class="event-tags">
+                  <span class="badge">Clothes</span>
+                  <span class="badge">Jewelry</span>
+                  <span class="badge">Food</span>
+                </div>
+                <div class="event-actions">
+                  <button class="btn btn-outline">View Details</button>
+                  <button class="btn btn-favorite js-add-favorite">Add to Favorites</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2: Hillcrest Farmers Market -->
+            <article class="event-card" data-event-id="hillcrest">
+              <div class="event-media">
+                <img src="source/ImageWithFallback-1.png" alt="Hillcrest Farmers Market" />
+                <div class="tag tag--type">Farmers Market</div>
+                <div class="tag tag--status-green">Year-Round</div>
+              </div>
+              <div class="event-body">
+                <h4>Hillcrest Farmers Market</h4>
+                <ul class="event-meta">
+                  <li>
+                    <span class="meta-icon meta-icon--location"></span>
+                    DMV Parking Lot, Normal St
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--calendar"></span>
+                    Sundays
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--time"></span>
+                    9:00 AM – 2:00 PM
+                  </li>
+                </ul>
+                <p class="event-description">
+                  One of San Diego's most popular markets featuring organic produce, artisan breads, and
+                  local honey.
+                </p>
+                <div class="event-tags">
+                  <span class="badge">Organic</span>
+                  <span class="badge">Parking</span>
+                  <span class="badge">Dog Friendly</span>
+                </div>
+                <div class="event-actions">
+                  <button class="btn btn-outline">View Details</button>
+                  <button class="btn btn-favorite js-add-favorite">Add to Favorites</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3: Little Italy Mercato -->
+            <article class="event-card" data-event-id="little-italy">
+              <div class="event-media">
+                <img src="source/ImageWithFallback-2.png" alt="Little Italy Mercato" />
+                <div class="tag tag--type">Farmers Market</div>
+                <div class="tag tag--status-green">Year-Round</div>
+              </div>
+              <div class="event-body">
+                <h4>Little Italy Mercato</h4>
+                <ul class="event-meta">
+                  <li>
+                    <span class="meta-icon meta-icon--location"></span>
+                    Date &amp; India St
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--calendar"></span>
+                    Saturdays
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--time"></span>
+                    8:00 AM – 2:00 PM
+                  </li>
+                </ul>
+                <p class="event-description">
+                  Downtown's largest farmers market with over 200 vendors, live music, and prepared foods.
+                </p>
+                <div class="event-tags">
+                  <span class="badge">Large</span>
+                  <span class="badge">Live Music</span>
+                  <span class="badge">Prepared Foods</span>
+                </div>
+                <div class="event-actions">
+                  <button class="btn btn-outline">View Details</button>
+                  <button class="btn btn-favorite js-add-favorite">Add to Favorites</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4: Pacific Beach Tuesday Market -->
+            <article class="event-card" data-event-id="pb-tuesday">
+              <div class="event-media">
+                <img src="source/ImageWithFallback-1.png" alt="Pacific Beach Tuesday Market" />
+                <div class="tag tag--type">Farmers Market</div>
+                <div class="tag tag--status-green">Year-Round</div>
+              </div>
+              <div class="event-body">
+                <h4>Pacific Beach Tuesday Market</h4>
+                <ul class="event-meta">
+                  <li>
+                    <span class="meta-icon meta-icon--location"></span>
+                    Bayard St &amp; Mission Blvd
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--calendar"></span>
+                    Tuesdays
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--time"></span>
+                    2:00 PM – 7:00 PM
+                  </li>
+                </ul>
+                <p class="event-description">
+                  Afternoon market steps from the beach with fresh produce and ocean breezes.
+                </p>
+                <div class="event-tags">
+                  <span class="badge">Evening</span>
+                  <span class="badge">Beach</span>
+                  <span class="badge">Ocean Views</span>
+                </div>
+                <div class="event-actions">
+                  <button class="btn btn-outline">View Details</button>
+                  <button class="btn btn-favorite js-add-favorite">Add to Favorites</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5: Balboa Park Craft Fair -->
+            <article class="event-card" data-event-id="balboa-craft">
+              <div class="event-media">
+                <img src="source/ImageWithFallback-6.png" alt="Balboa Park Craft Fair" />
+                <div class="tag tag--type">Craft Fair</div>
+              </div>
+              <div class="event-body">
+                <h4>Balboa Park Craft Fair</h4>
+                <ul class="event-meta">
+                  <li>
+                    <span class="meta-icon meta-icon--location"></span>
+                    Balboa Park, El Prado
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--calendar"></span>
+                    Saturdays
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--time"></span>
+                    10:00 AM – 5:00 PM
+                  </li>
+                </ul>
+                <p class="event-description">
+                  Monthly craft fair featuring local artisans, handmade jewelry, pottery, and unique gifts.
+                </p>
+                <div class="event-tags">
+                  <span class="badge">Handmade</span>
+                  <span class="badge">Art</span>
+                  <span class="badge">Gifts</span>
+                </div>
+                <div class="event-actions">
+                  <button class="btn btn-outline">View Details</button>
+                  <button class="btn btn-favorite js-add-favorite">Add to Favorites</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6: North Park Vintage Market -->
+            <article class="event-card" data-event-id="north-park-vintage">
+              <div class="event-media">
+                <img src="source/ImageWithFallback-3.png" alt="North Park Vintage Market" />
+                <div class="tag tag--type">Pop-Up Market</div>
+              </div>
+              <div class="event-body">
+                <h4>North Park Vintage Market</h4>
+                <ul class="event-meta">
+                  <li>
+                    <span class="meta-icon meta-icon--location"></span>
+                    30th &amp; University Ave
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--calendar"></span>
+                    Sundays
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--time"></span>
+                    11:00 AM – 4:00 PM
+                  </li>
+                </ul>
+                <p class="event-description">
+                  Curated vintage clothing, records, antiques, and local vendor pop-ups.
+                </p>
+                <div class="event-tags">
+                  <span class="badge">Vintage</span>
+                  <span class="badge">Pop-Up</span>
+                  <span class="badge">Records</span>
+                </div>
+                <div class="event-actions">
+                  <button class="btn btn-outline">View Details</button>
+                  <button class="btn btn-favorite js-add-favorite">Add to Favorites</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 7: Ocean Beach Street Fair -->
+            <article class="event-card" data-event-id="ob-street-fair">
+              <div class="event-media">
+                <img src="source/ImageWithFallback-4.png" alt="Ocean Beach Street Fair" />
+                <div class="tag tag--type">Street Festival</div>
+                <div class="tag tag--status-green">Year-Round</div>
+              </div>
+              <div class="event-body">
+                <h4>Ocean Beach Street Fair</h4>
+                <ul class="event-meta">
+                  <li>
+                    <span class="meta-icon meta-icon--location"></span>
+                    Newport Ave
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--calendar"></span>
+                    Wednesdays
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--time"></span>
+                    4:00 PM – 9:00 PM
+                  </li>
+                </ul>
+                <p class="event-description">
+                  Weekly street fair with food trucks, live music, local vendors, and ocean views.
+                </p>
+                <div class="event-tags">
+                  <span class="badge">Evening</span>
+                  <span class="badge">Food Trucks</span>
+                  <span class="badge">Live Music</span>
+                </div>
+                <div class="event-actions">
+                  <button class="btn btn-outline">View Details</button>
+                  <button class="btn btn-favorite js-add-favorite">Add to Favorites</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 8: La Jolla Art & Wine Walk -->
+            <article class="event-card" data-event-id="la-jolla-art-wine">
+              <div class="event-media">
+                <img src="source/ImageWithFallback.png" alt="La Jolla Art & Wine Walk" />
+                <div class="tag tag--type">Art Walk</div>
+              </div>
+              <div class="event-body">
+                <h4>La Jolla Art &amp; Wine Walk</h4>
+                <ul class="event-meta">
+                  <li>
+                    <span class="meta-icon meta-icon--location"></span>
+                    Prospect St &amp; Girard Ave
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--calendar"></span>
+                    Fridays
+                  </li>
+                  <li>
+                    <span class="meta-icon meta-icon--time"></span>
+                    6:00 PM – 9:00 PM
+                  </li>
+                </ul>
+                <p class="event-description">
+                  Monthly evening showcasing local galleries, wine tastings, and street performers.
+                </p>
+                <div class="event-tags">
+                  <span class="badge">Art</span>
+                  <span class="badge">Wine</span>
+                  <span class="badge">Gallery Night</span>
+                </div>
+                <div class="event-actions">
+                  <button class="btn btn-outline">View Details</button>
+                  <button class="btn btn-favorite js-add-favorite">Add to Favorites</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- GUIDE SECTION -->
+      <section class="guide">
+        <header class="guide-header">
+          <h2>Your Guide to San Diego Events</h2>
+          <p>
+            We make it easy to discover and connect with local events throughout San Diego County.
+            Find farmers markets, craft fairs, pop-up shops, street festivals, and community
+            gatherings near you.
+          </p>
+        </header>
+
+        <div class="guide-grid">
+          <article class="guide-card">
+            <div class="guide-icon guide-icon--map"></div>
+            <h3>Find Events Near You</h3>
+            <p>Discover local happenings throughout San Diego County with our interactive map and search tools.</p>
+          </article>
+          <article class="guide-card">
+            <div class="guide-icon guide-icon--calendar"></div>
+            <h3>Never Miss an Event</h3>
+            <p>Get weekly schedules, special events, and seasonal updates for markets, fairs, and festivals.</p>
+          </article>
+          <article class="guide-card">
+            <div class="guide-icon guide-icon--heart"></div>
+            <h3>Support Local Community</h3>
+            <p>Connect directly with local vendors, artisans, and organizers supporting San Diego.</p>
+          </article>
+          <article class="guide-card">
+            <div class="guide-icon guide-icon--community"></div>
+            <h3>Community Driven</h3>
+            <p>Join thousands discovering and sharing the best local events happening around you.</p>
+          </article>
+        </div>
+
+        <div class="why-local">
+          <h2>Why Attend Local Events?</h2>
+          <div class="why-grid">
+            <div class="why-item">
+              <div class="why-icon why-icon--leaf"></div>
+              <h3>Discover Local Gems</h3>
+              <p>Find unique products, fresh foods, and handmade goods you will not see anywhere else.</p>
+            </div>
+            <div class="why-item">
+              <div class="why-icon why-icon--handshake"></div>
+              <h3>Meet Your Community</h3>
+              <p>Connect with neighbors, makers, and local businesses in your area.</p>
+            </div>
+            <div class="why-item">
+              <div class="why-icon why-icon--heart"></div>
+              <h3>Support Local Economy</h3>
+              <p>Keep money in the community and help small businesses thrive.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER CTA -->
+      <section class="newsletter">
+        <div class="newsletter-icon"></div>
+        <h2>Get Weekly Market Updates</h2>
+        <p>
+          Subscribe to receive the latest market schedules, seasonal produce guides, vendor spotlights,
+          and special event announcements.
+        </p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Enter your email" />
+          <button class="btn btn-primary">Subscribe</button>
+        </form>
+        <small>We respect your privacy. Unsubscribe anytime.</small>
+      </section>
+    </section>
+
+    <!-- FAVORITES VIEW -->
+    <section id="favorites-view" class="hidden">
+      <section class="favorites-hero">
+        <h2>Your Favorites</h2>
+        <p>Events you have saved from the homepage will appear here.</p>
+      </section>
+
+      <section class="favorites-list">
+        <div class="favorites-empty" id="favorites-empty">
+          <div class="today-emoji">⭐</div>
+          <h3>No favorites yet</h3>
+          <p>Tap “Add to Favorites” on any event to save it here.</p>
+        </div>
+        <div class="card-grid" id="favorites-grid"></div>
+      </section>
+    </section>
+
+    <!-- (Optional) placeholder for FAQ / Account if you want later -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>SD Farmers Markets</h3>
+        <p>
+          Your guide to discovering fresh, local produce at farmers markets throughout San Diego County.
+        </p>
+        <div class="footer-social">
+          <button class="social-circle social-circle--facebook"></button>
+          <button class="social-circle social-circle--twitter"></button>
+          <button class="social-circle social-circle--instagram"></button>
+        </div>
+      </div>
+
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>Central San Diego</h4>
+          <ul>
+            <li>Hillcrest</li>
+            <li>Little Italy</li>
+            <li>North Park</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Coastal</h4>
+          <ul>
+            <li>La Jolla</li>
+            <li>Pacific Beach</li>
+            <li>Ocean Beach</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>North County</h4>
+          <ul>
+            <li>Carlsbad</li>
+            <li>Encinitas</li>
+            <li>Vista</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 San Diego Farmers Markets Guide. All rights reserved.</p>
+      <p class="footer-email">info@sdfarmersmarkets.com</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
