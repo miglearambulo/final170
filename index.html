@@ -28,15 +28,19 @@
         <span class="nav-icon nav-icon--faq"></span>
         FAQ
       </button>
-      <button class="nav-pill" data-view="favorites">
-        <span class="nav-icon nav-icon--account"></span>
-        Favorites
-      </button>
-      <button class="nav-pill nav-pill--ghost" data-view="account">
-        <span class="nav-icon nav-icon--account-circle"></span>
-        Account
-        <span class="nav-chevron"></span>
-      </button>
+      <div class="nav-dropdown">
+        <button class="nav-pill nav-pill--ghost js-account-toggle">
+          <span class="nav-icon nav-icon--account-circle"></span>
+          Account
+          <span class="nav-chevron"></span>
+        </button>
+        <div class="dropdown-menu" id="account-dropdown">
+          <button class="dropdown-item" data-view="favorites">
+            <span class="nav-icon nav-icon--favorites"></span>
+            Favorites
+          </button>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -148,7 +152,8 @@
             <!-- 1: The Kickback -->
             <article class="event-card" data-event-id="kickback">
               <div class="event-media">
-                <img src="source/ImageWithFallback-5.png" alt="The Kickback pop-up market" />
+                <img src="source/ImageWithFallback-6.png" alt="The Kickback pop-up market" />
+                <button class="heart-icon js-heart-toggle" aria-label="Add to favorites"></button>
                 <div class="tag tag--type">Pop-Up Market</div>
                 <div class="tag tag--status">Coming Soon</div>
               </div>
@@ -187,7 +192,8 @@
             <!-- 2: Hillcrest Farmers Market -->
             <article class="event-card" data-event-id="hillcrest">
               <div class="event-media">
-                <img src="source/ImageWithFallback-1.png" alt="Hillcrest Farmers Market" />
+                <img src="source/ImageWithFallback-2.png" alt="Hillcrest Farmers Market" />
+                <button class="heart-icon js-heart-toggle" aria-label="Add to favorites"></button>
                 <div class="tag tag--type">Farmers Market</div>
                 <div class="tag tag--status-green">Year-Round</div>
               </div>
@@ -226,7 +232,8 @@
             <!-- 3: Little Italy Mercato -->
             <article class="event-card" data-event-id="little-italy">
               <div class="event-media">
-                <img src="source/ImageWithFallback-2.png" alt="Little Italy Mercato" />
+                <img src="source/ImageWithFallback-3.png" alt="Little Italy Mercato" />
+                <button class="heart-icon js-heart-toggle" aria-label="Add to favorites"></button>
                 <div class="tag tag--type">Farmers Market</div>
                 <div class="tag tag--status-green">Year-Round</div>
               </div>
@@ -264,7 +271,8 @@
             <!-- 4: Pacific Beach Tuesday Market -->
             <article class="event-card" data-event-id="pb-tuesday">
               <div class="event-media">
-                <img src="source/ImageWithFallback-1.png" alt="Pacific Beach Tuesday Market" />
+                <img src="source/ImageWithFallback-2.png" alt="Pacific Beach Tuesday Market" />
+                <button class="heart-icon js-heart-toggle" aria-label="Add to favorites"></button>
                 <div class="tag tag--type">Farmers Market</div>
                 <div class="tag tag--status-green">Year-Round</div>
               </div>
@@ -302,7 +310,8 @@
             <!-- 5: Balboa Park Craft Fair -->
             <article class="event-card" data-event-id="balboa-craft">
               <div class="event-media">
-                <img src="source/ImageWithFallback-6.png" alt="Balboa Park Craft Fair" />
+                <img src="source/ImageWithFallback-5.png" alt="Balboa Park Craft Fair" />
+                <button class="heart-icon js-heart-toggle" aria-label="Add to favorites"></button>
                 <div class="tag tag--type">Craft Fair</div>
               </div>
               <div class="event-body">
@@ -339,7 +348,8 @@
             <!-- 6: North Park Vintage Market -->
             <article class="event-card" data-event-id="north-park-vintage">
               <div class="event-media">
-                <img src="source/ImageWithFallback-3.png" alt="North Park Vintage Market" />
+                <img src="source/ImageWithFallback-6.png" alt="North Park Vintage Market" />
+                <button class="heart-icon js-heart-toggle" aria-label="Add to favorites"></button>
                 <div class="tag tag--type">Pop-Up Market</div>
               </div>
               <div class="event-body">
@@ -376,7 +386,8 @@
             <!-- 7: Ocean Beach Street Fair -->
             <article class="event-card" data-event-id="ob-street-fair">
               <div class="event-media">
-                <img src="source/ImageWithFallback-4.png" alt="Ocean Beach Street Fair" />
+                <img src="source/ImageWithFallback-1.png" alt="Ocean Beach Street Fair" />
+                <button class="heart-icon js-heart-toggle" aria-label="Add to favorites"></button>
                 <div class="tag tag--type">Street Festival</div>
                 <div class="tag tag--status-green">Year-Round</div>
               </div>
@@ -414,7 +425,8 @@
             <!-- 8: La Jolla Art & Wine Walk -->
             <article class="event-card" data-event-id="la-jolla-art-wine">
               <div class="event-media">
-                <img src="source/ImageWithFallback.png" alt="La Jolla Art & Wine Walk" />
+                <img src="source/ImageWithFallback-4.png" alt="La Jolla Art & Wine Walk" />
+                <button class="heart-icon js-heart-toggle" aria-label="Add to favorites"></button>
                 <div class="tag tag--type">Art Walk</div>
               </div>
               <div class="event-body">

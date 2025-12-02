@@ -62,7 +62,7 @@ main {
   height: 32px;
   position: relative;
   overflow: hidden;
-  background-image: url('source/Icon.svg');
+  background-image: url('source/Icon-4.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -126,7 +126,7 @@ main {
 }
 
 .nav-icon--home {
-  background-image: url('source/Icon-1.svg');
+  background-image: url('source/Icon-3.svg');
 }
 
 .nav-icon--faq {
@@ -134,11 +134,61 @@ main {
 }
 
 .nav-icon--account {
-  background-image: url('source/Icon-3.svg');
+  background-image: url('source/Icon.svg');
 }
 
 .nav-icon--account-circle {
-  background-image: url('source/Icon-4.svg');
+  background-image: url('source/Icon.svg');
+}
+
+.nav-icon--favorites {
+  background-image: url('source/Icon-14.svg');
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background: var(--bg-light);
 }
 
 .nav-chevron {
@@ -146,6 +196,11 @@ main {
   height: 4px;
   border-radius: 999px;
   border: 1.33px solid var(--text-main);
+  transition: transform 0.2s ease;
+}
+
+.js-account-toggle.open .nav-chevron {
+  transform: rotate(180deg);
 }
 
 /* HERO */
@@ -282,7 +337,7 @@ main {
 }
 
 .btn-icon--search {
-  background-image: url('source/Icon-5.svg');
+  background-image: url('source/Icon-2.svg');
 }
 
 /* FILTER BAR */
@@ -315,7 +370,7 @@ main {
   width: 24px;
   height: 24px;
   display: inline-block;
-  background-image: url('source/Icon-6.svg');
+  background-image: url('source/Icon-3.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -486,11 +541,11 @@ main {
 }
 
 .toggle-icon--grid {
-  background-image: url('source/Icon-7.svg');
+  background-image: url('source/Icon-21.svg');
 }
 
 .toggle-icon--map {
-  background-image: url('source/Icon-8.svg');
+  background-image: url('source/Icon-5.svg');
 }
 
 .upcoming-inner {
@@ -553,6 +608,39 @@ main {
   transform: scale(1.05);
 }
 
+.heart-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  background-image: url('source/Icon-14.svg');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heart-icon:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.heart-icon.filled {
+  background-color: var(--green);
+  background-image: url('source/Icon-14.svg');
+}
+
+.heart-icon.filled:hover {
+  background-color: var(--green-dark);
+}
+
 .tag {
   position: absolute;
   top: 12px;
@@ -569,13 +657,13 @@ main {
 }
 
 .tag--status {
-  right: 12px;
+  right: 52px;
   background: var(--yellow);
   color: #000000;
 }
 
 .tag--status-green {
-  right: 12px;
+  right: 52px;
   background: #00a63e;
   color: #ffffff;
 }
@@ -615,15 +703,15 @@ main {
 }
 
 .meta-icon--location {
-  background-image: url('source/Icon-9.svg');
+  background-image: url('source/Icon-6.svg');
 }
 
 .meta-icon--calendar {
-  background-image: url('source/Icon-10.svg');
+  background-image: url('source/Icon-7.svg');
 }
 
 .meta-icon--time {
-  background-image: url('source/Icon-11.svg');
+  background-image: url('source/Icon-8.svg');
 }
 
 .event-description {
@@ -708,19 +796,19 @@ main {
 }
 
 .guide-icon--map {
-  background-image: url('source/Icon-12.svg');
+  background-image: url('source/Icon-9.svg');
 }
 
 .guide-icon--calendar {
-  background-image: url('source/Icon-13.svg');
+  background-image: url('source/Icon-10.svg');
 }
 
 .guide-icon--heart {
-  background-image: url('source/Icon-14.svg');
+  background-image: url('source/Icon-11.svg');
 }
 
 .guide-icon--community {
-  background-image: url('source/Icon-15.svg');
+  background-image: url('source/Icon-12.svg');
 }
 
 .guide-card h3 {
@@ -770,15 +858,15 @@ main {
 }
 
 .why-icon--leaf {
-  background-image: url('source/Icon-16.svg');
+  background-image: url('source/Icon-13.svg');
 }
 
 .why-icon--handshake {
-  background-image: url('source/Icon-17.svg');
+  background-image: url('source/Icon-15.svg');
 }
 
 .why-icon--heart {
-  background-image: url('source/Icon-18.svg');
+  background-image: url('source/Icon-16.svg');
 }
 
 /* NEWSLETTER */
@@ -797,7 +885,7 @@ main {
   margin: 0 auto 24px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.2);
-  background-image: url('source/Icon-19.svg');
+  background-image: url('source/Icon-17.svg');
   background-size: 40px 40px;
   background-repeat: no-repeat;
   background-position: center;
@@ -925,15 +1013,15 @@ main {
 }
 
 .social-circle--facebook {
-  background-image: url('source/Icon-20.svg');
+  background-image: url('source/Icon-18.svg');
 }
 
 .social-circle--twitter {
-  background-image: url('source/Icon-21.svg');
+  background-image: url('source/Icon-19.svg');
 }
 
 .social-circle--instagram {
-  background-image: url('source/Icon-22.svg');
+  background-image: url('source/Icon-20.svg');
 }
 
 .footer-columns {

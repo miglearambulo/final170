@@ -5,6 +5,57 @@ const favoritesView = document.getElementById("favorites-view");
 const favoritesGrid = document.getElementById("favorites-grid");
 const favoritesEmpty = document.getElementById("favorites-empty");
 
+// Account dropdown toggle
+const accountToggle = document.querySelector(".js-account-toggle");
+const accountDropdown = document.getElementById("account-dropdown");
+
+if (accountToggle && accountDropdown) {
+  accountToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    accountToggle.classList.toggle("open");
+    accountDropdown.classList.toggle("show");
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".nav-dropdown")) {
+      accountToggle.classList.remove("open");
+      accountDropdown.classList.remove("show");
+    }
+  });
+
+  // Handle dropdown item clicks
+  const dropdownItems = accountDropdown.querySelectorAll(".dropdown-item");
+  dropdownItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const view = item.getAttribute("data-view");
+      if (view === "favorites") {
+        showView("favorites");
+        navPills.forEach((p) => p.classList.remove("nav-pill--active"));
+      }
+      accountDropdown.classList.remove("show");
+      accountToggle.classList.remove("open");
+    });
+  });
+}
+
+// Heart icon toggle functionality
+const heartIcons = document.querySelectorAll(".js-heart-toggle");
+heartIcons.forEach((heart) => {
+  heart.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent card click event
+    heart.classList.toggle("filled");
+    
+    // Optional: Add haptic feedback or animation
+    if (heart.classList.contains("filled")) {
+      heart.style.transform = "scale(1.2)";
+      setTimeout(() => {
+        heart.style.transform = "";
+      }, 200);
+    }
+  });
+});
+
 // Helper to switch visible view
 function showView(view) {
   if (view === "favorites") {
