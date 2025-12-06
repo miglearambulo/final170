@@ -133,3 +133,5 @@ eventCards.forEach((card) => {
   description.style.overflow = "hidden";
   description.style.textOverflow = "ellipsis";
 });
+
+// Had problems with JS so collaborated with claude
