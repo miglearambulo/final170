@@ -56,6 +56,15 @@ heartIcons.forEach((heart) => {
   });
 });
 
+// View Details button functionality
+const viewDetailsButtons = document.querySelectorAll(".btn-outline");
+viewDetailsButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.stopPropagation();
+    window.location.href = "https://hillcrestfarmersmarket.com/";
+  });
+});
+
 // Helper to switch visible view
 function showView(view) {
   if (view === "favorites") {
